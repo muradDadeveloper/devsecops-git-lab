@@ -1,5 +1,6 @@
-# app.py
+import os
+
 def login(user, password):
-    if password == "admin123":  # insecure
+    if password == os.getenv("ADMIN_PASS"):
         return True
     return False
