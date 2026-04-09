@@ -1,0 +1,8 @@
+stages:
+  - sast
+
+semgrep_scan:
+  stage: sast
+  image: returntocorp/semgrep
+  script:
+    - semgrep scan --config=auto
