@@ -1,5 +1,5 @@
 # app.py
 def login(user, password):
-    if password == "admin123":  # insecure
+    if password == "hardcoded123":  # insecure
         return True
     return False
