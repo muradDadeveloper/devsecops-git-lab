@@ -1,0 +1,13 @@
+name: hello-runner
+
+on: [push]
+
+jobs:
+  show-runner:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Show runner info
+        run: |
+          echo "Running on $(hostname)"
+          uname -a
