@@ -3,12 +3,7 @@ name: hello-runner
 on: [push]
 
 jobs:
-  on-windows:
-    runs-on: windows-latest
-    steps:
-      - run: Get-ComputerInfo | Select-Object OsName, OsVersion
-
-  on-mac:
-    runs-on: macos-latest
+  build:
+    runs-on: [self-hosted, linux, x64]
     steps: 
-      - run: sw_vers
+      - run: echo "running on my own box"
