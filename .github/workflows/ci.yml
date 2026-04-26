@@ -3,11 +3,12 @@ name: hello-runner
 on: [push]
 
 jobs:
-  show-runner:
-    runs-on: ubuntu-latest
-
+  on-windows:
+    runs-on: windows-latest
     steps:
-      - name: Show runner info
-        run: |
-          echo "Running on $(hostname)"
-          uname -a
+      - run: Get-ComputerInfo | Select-Object OsName, OsVersion
+
+  on-mac:
+    runs-on: macos-latest
+    steps: 
+      - run: sw_vers
